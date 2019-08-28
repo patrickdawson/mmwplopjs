@@ -1,0 +1,34 @@
+/**
+ * Copyright (c)2019
+ *
+ * @ignore
+ */
+
+"use strict";
+
+const chai = require("chai");
+
+const expect = chai.expect;
+
+describe("{{camelCase name}} module", function () {
+    let {{camelCase name}}Module;
+
+    before(function () {
+        {{camelCase name}}Module = require("../src/{{camelCase name}}");
+    });
+
+    after(function () {
+        {{camelCase name}}Module = null;
+    });
+
+    beforeEach(function () {
+    });
+
+    afterEach(function () {
+    });
+
+    it("says hello to given name", function () {
+        const result = {{camelCase name}}Module("world");
+        expect(result).to.eql("Hello world");
+    });
+});
