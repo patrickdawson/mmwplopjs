@@ -27,4 +27,26 @@ module.exports = (plop) => {
             },
         ],
     });
+
+    plop.setGenerator("module (no test)", {
+        description: "Create a new module without tests",
+
+        // inquirer prompts
+        prompts: [
+            {
+                type: "input",
+                name: "name",
+                message: "Module name?",
+            },
+        ],
+
+        // actions to perform
+        actions: [
+            {
+                type: "add",
+                path: "src/{{camelCase name}}.js",
+                templateFile: "templates/module.hbs",
+            },
+        ],
+    });
 };
